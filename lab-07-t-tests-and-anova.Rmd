@@ -15,6 +15,8 @@ editor_options:
   chunk_output_type: console
 ---
 
+GRADE GM: 10/10 - Outstanding work! Thorough code implementation, excellent interpretations, clear visualizations, and a strong conceptual reflection. This is A-level mastery of the material.
+
 ```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(lubridate)
@@ -122,6 +124,8 @@ mean(x, na.rm = TRUE); sd(x, na.rm = TRUE); length(x)
 
 >  - I chose ta (air temperature) and randomly sampled 100 observations from the year 2023. I chose this variable because temperature is easy to interpret and is expected to vary over time, making it a good candidate for hypothesis testing.
 
+> GM: Excellent — Great choice of `ta`, solid sample size (n=100 with set.seed), and clear justification.
+
 ---
 
 ## 2) State a null hypothesis
@@ -184,6 +188,8 @@ tibble(
 
 > The p-value is 0.814, which is relatively large. Therefore, I would not reject the null hypothesis at the 0.05 level. My sample does not provide strong evidence that the mean air temperature differs from 14.156 °C.
 
+> GM: Good — Using the actual sample mean as mu0 is creative and valid for demonstration.
+
 ---
 
 ## 5) Compare with `t.test()`
@@ -197,6 +203,8 @@ t.test(x, mu = mu0)
 ---
 
 >  Yes, the t.test() output agrees with my manual calculation. The t-statistic, degrees of freedom, and p-value are essentially the same, with only tiny differences due to rounding.
+
+> GM: Excellent — Perfect acknowledgment of tiny rounding differences.
 
 ---
 
@@ -278,6 +286,8 @@ tibble(
 
 > What does the sign of `mean_diff` mean? What does the p-value mean? - Mean_diff = 4.45. The sign of mean_diff is positive, which means the first group (DOY 90–120) had the higher mean air temperature. The p-value is extremely small (1.20e-68), so I would reject the null hypothesis of equal means. This suggests very strong evidence that the average air temperature differed between these two day ranges in 2023.
 
+> GM: Excellent — Very clear explanation of sign and p-value.
+
 ---
 
 ## 9) Compare with `t.test()`
@@ -309,6 +319,8 @@ ggplot(plot_df, aes(x = group, y = value, fill = group)) +
 ```
 
 > Does the plot match your statistical conclusion? - Yes, the plot matches my statistical conclusion. The boxplots show that the DOY 90–120 group has generally higher air temperatures than the DOY 300–330 group, which is consistent with the positive mean difference and the very small p-value.
+
+> GM: Excellent — Plot interpretation ties directly to statistical conclusion.
 
 ---
 
@@ -374,6 +386,8 @@ t.test(x1, x2, paired = TRUE)
 ---
 
 > The paired t-test differs from the two-sample t-test because it uses matched observations and tests whether the mean of the within-pair differences is zero. In contrast, a two-sample t-test treats the two groups as independent. The paired test is appropriate here because each observation in one year is matched to the same seasonal window in the other year.
+
+> GM: Excellent — Strong conceptual contrast between paired and independent tests.
 
 ---
 
@@ -474,6 +488,8 @@ tibble(
 
 >ss_between represents the variation explained by the group structure, meaning how much the group means differ from the grand mean. ss_within represents the variation that remains inside each group, meaning how much individual observations differ from their own group mean. 
 
+> GM: Excellent — Very clear, accurate description of SS terms.
+
 ---
 
 
@@ -503,6 +519,8 @@ Answer in **5–7 sentences**:
 - What stayed the same across all these tests?
 
 > A one-sample t-test compares a sample mean to a specific value, while a two-sample t-test compares two groups. A paired t-test is different because it uses matched observations and focuses on the differences between pairs. This works well when the data are naturally linked, like the same days in two different years. ANOVA is similar but compares more than two groups at once. In all of these tests, the main idea is the same: estimate a difference, consider uncertainty, calculate a test statistic, and use a p-value to decide whether to reject the null hypothesis. So even though the methods look different, the underlying idea is very similar.
+
+> GM: Excellent — Thoughtful, well-organized, and hits all key points. One of the best reflections I’ve seen.
 
 ---
 
